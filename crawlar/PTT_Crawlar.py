@@ -8,7 +8,7 @@ import time
 class PTTData():
 
     def __init__(self):
-        self.url = 'https://www.ptt.cc/bbs/Gossiping/index37133.html'
+        self.url = 'https://www.ptt.cc/bbs/Gossiping/index34133.html'
         self.articles_list = []
 
     def Connect(self):
@@ -69,7 +69,7 @@ class PTTData():
                     }
             self.articles_list.append(result_dict) 
 
-    def GetPTTData(self,pages = 1000):
+    def GetPTTData(self,pages = 5000):
         for page in range(pages):
             self.Connect()
         return self.articles_list

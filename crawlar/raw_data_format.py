@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import sys, os, time, io
 import re
-import pdb
 
 source_path_file = r'./test.txt'
 
@@ -32,8 +31,6 @@ df.replace( ['\r\n', '\n', ',', '\u3000'], [' ', ' ', '，', ' '], inplace=True,
 
 #generate data set
 print( 'saving data...' )
-df['time'] = pd.to_datetime(df['time'])
-df.index = df['time']
 df.to_csv( 'pttData.csv' ,sep=',', na_rep='', encoding='utf-8', mode='w', header=True, index=False )
 print( '\tsize of dataframe: ', df.shape )
 print( '\tcol tags of dataframe is: ', col_tags )
